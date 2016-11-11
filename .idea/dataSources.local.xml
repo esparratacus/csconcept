@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="Rails concept: development" uuid="89dc2432-c9b8-4c6c-a3d1-fe1197fc7fc6">
+      <first-sync>true</first-sync>
+      <user-name>serrano</user-name>
+      <user-password>dfdadfdfdfc4dfdedfc5dfc3dfc4dfcd</user-password>
+    </data-source>
+    <data-source name="Rails concept: production" uuid="3bffed27-b83a-4144-a640-676ea58c8a1a">
+      <user-name>concept</user-name>
+      <user-password>df96df8fdf97df8adfefdfe4dffcdff1df8ddfe9dfe5dfe4dfe9dfefdffadffedff5dfeedfebdffedfebdfe8dfebdff9dfefdff5dffadfebdff9dff9dffddfe5dff8dfeedf8ddff7df8adf8fdf94</user-password>
+    </data-source>
+    <data-source name="Rails concept: test" uuid="01476c50-7e0d-4732-b7f5-a5e56f40a756">
+      <user-name>serrano</user-name>
+      <user-password>dfdadfdfdfc4dfdedfc5dfc3dfc4dfcd</user-password>
+    </data-source>
+  </component>
+</project>
