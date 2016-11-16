@@ -14,4 +14,20 @@ class AmadeusService
 
   end
 
+  def get_extensive_search(origin,destination,departure_range,duration)
+    begin
+      flights=@api_instance.flight_extensive_search(@apikey,origin,destination,departure_date: departure_range,duration: duration,one_way:false,direct: false)
+    rescue SwaggerClient::ApiError => e
+      puts "Exception when calling DefaultApi->flight_extensive_search: #{e}"
+    end
+  end
+
+  def get_airport_hotel_search(location,check_in_date,check_out_date)
+    begin
+      hotels=@api_instance.hotel_airport_search(@apikey,location,check_in_date,check_out_date)
+    rescue SwaggerClient::ApiError => e
+      puts "Exception when calling DefaultApi->hotel_airport_search: #{e}"
+    end
+  end
+
 end

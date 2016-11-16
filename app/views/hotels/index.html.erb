@@ -3,16 +3,16 @@
     <div class="w3-container w3-teal">
       <h2>Flight search</h2>
     </div>
-    <%= form_tag flights_lookup_path, remote: true do %>
-        <%= label_tag :origin %>
-        <%= text_field_tag :origin,nil,class:'w3-input' %>
-        <%= label_tag :destination %>
-        <%= text_field_tag :destination,nil,class:'w3-input' %>
+    <%= form_tag hotels_lookup_path, remote: true do %>
+        <%= label_tag :location %>
+        <%= text_field_tag :location,nil,class:'w3-input' %>
 
-        <%= text_field_tag :start_date ,nil,id:'start-date'%>
-        <%= text_field_tag :end_date ,nil,id:'end-date'%>
+        <%= label_tag :check_in_date %>
+        <%= text_field_tag :check_in_date ,nil,id:'check-in-date'%>
 
-        <%= number_field_tag :duration,nil,class:'w3-input' %>
+        <%= label_tag :check_out_date %>
+        <%= text_field_tag :check_out_date ,nil,id:'check-out-date'%>
+
         <%= submit_tag 'look up' %>
     <% end %>
   </div>
@@ -20,17 +20,15 @@
 <div id="results" style="min-width:400px">
 
 </div>
-
-
 <script type="text/javascript" charset="utf-8">
   $(function() {
-    $('#start-date').datepicker({ dateFormat: 'yy-mm-dd' });
-    $('#end-date').datepicker({ dateFormat: 'yy-mm-dd' });
+    $('#check-in-date').datepicker({ dateFormat: 'yy-mm-dd' });
+    $('#check-out-date').datepicker({ dateFormat: 'yy-mm-dd' });
     function log( message ) {
       $( "<div>" ).text( message ).prependTo( "#log" );
       $( "#log" ).scrollTop( 0 );
     }
-    $( "#origin" ).autocomplete({
+    $( "#location" ).autocomplete({
       source: function( request, response ) {
         $.ajax({
           url: "http://api.sandbox.amadeus.com/v1.2/airports/autocomplete",
